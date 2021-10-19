@@ -27,7 +27,7 @@ def draw_menu(stdscr):
         height, width = stdscr.getmaxyx()
 
         # Cancella (con backspace)
-        if (k == 263):
+        if ((k == 263) or (k == 127)):
             s = ""
             result = "?"
         # Invio (lancia il dado)
