@@ -58,10 +58,6 @@ def draw_menu(stdscr):
         start_x_keystr = int((width // 2) - (len(keystr) // 2) - len(keystr) % 2)
         start_y = int((height // 2) - 2)
 
-        # Rendering some text
-        #whstr = "Width: {}, Height: {}".format(width, height)
-        #stdscr.addstr(0, 0, whstr, curses.color_pair(1))
-
         # Render status bar
         stdscr.attron(curses.color_pair(3))
         stdscr.addstr(height-1, 0, statusbarstr)
@@ -89,15 +85,6 @@ def draw_menu(stdscr):
 
         # Wait for next input
         k = stdscr.getch()
-        
-        #while (True):
-        #print(">", end="")
-        #x = input()
-        #x = int(x)
-        #if (x > 0):
-        #    
-        #    print ("1d"+str(x)+" = "+str(r))
-
 
 def main():
     curses.wrapper(draw_menu)
